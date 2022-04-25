@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Email</th>
                             <th>Nama Perusahaan</th>
                             <th>Posisi</th>
                             <th>Pendapatan</th>
@@ -49,6 +50,7 @@
                 ajax: "{{ route('pekerjaan') }}",
                 columns: [
                     {   data: 'DT_RowIndex',    name:'DT_RowIndex'},
+                    {   data: 'admin.email',          name: 'admin.email'},
                     {   data: 'nama_perusahaan',          name: 'nama_perusahaan'},
                     {   data: 'posisi_terakhir',          name: 'posisi_terakhir'},
                     {   data: 'pendapatan_terakhir',          name: 'pendapatan_terakhir'},

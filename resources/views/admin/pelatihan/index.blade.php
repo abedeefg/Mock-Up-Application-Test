@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Email</th>
                             <th>Nama Pelatihan</th>
                             <th>Sertifikat</th>
                             <th>Tahun</th>
@@ -48,6 +49,7 @@
                 ajax: "{{ route('pelatihan') }}",
                 columns: [
                     {   data: 'DT_RowIndex',    name:'DT_RowIndex'},
+                    {   data: 'admin.email',          name: 'admin.email'},
                     {   data: 'nama_pelatihan',          name: 'nama_pelatihan'},
                     {   data: 'sertifikat',          name: 'sertifikat'},
                     {   data: 'tahun',          name: 'tahun'},

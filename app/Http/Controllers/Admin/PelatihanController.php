@@ -23,7 +23,7 @@ class PelatihanController extends Controller
         if ($request->ajax()) {
            
             if (auth('admin')->user()->level=="Admin") {
-                $data = Pelatihan::all();
+                $data = Pelatihan::with('admin')->get();
             }else{
                 $data = Pelatihan::with('admin')->where('admin_id',auth('admin')->user()->id)->get();
 

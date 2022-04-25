@@ -51,7 +51,7 @@ class LoginController extends Controller
         ]);
 
         $data['uuid'] = Str::uuid()->toString();
-        $data['nama_lengkap'] = 'Karyawan';
+        $data['nama_lengkap'] = $request['email'];
         $data['email'] = $request['email'];
         $data['password'] = bcrypt($request['password']);
         $data['status'] = "1";

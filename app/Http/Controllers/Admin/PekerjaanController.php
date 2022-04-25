@@ -23,7 +23,7 @@ class PekerjaanController extends Controller
         if ($request->ajax()) {
           
             if (auth('admin')->user()->level=="Admin") {
-                $data = Pekerjaan::all();
+                $data = Pekerjaan::with('admin')->get();
             }else{
                 $data = Pekerjaan::with('admin')->where('admin_id',auth('admin')->user()->id)->get();
 

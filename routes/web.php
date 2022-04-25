@@ -38,7 +38,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function(){
           
         // });
 
-        Route::group(['prefix' => 'admin','middleware' => ['auth:admin','role:Admin' ]],function(){
+        Route::group(['prefix' => 'admin','middleware' => ['auth:admin','role:Admin']],function(){
             Route::get('/',[AdminController::class,'index'])->name('admin');
             Route::get('create',[AdminController::class,'create'])->name('create-admin');
             Route::post('store',[AdminController::class,'store'])->name('storeAdmin');
@@ -49,7 +49,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function(){
             Route::delete('destroy/{uuid}',[AdminController::class,'destroy']);
         });
        
-        Route::group(['prefix' => 'biodata','middleware' => ['role:Admin,Karyawan' ]],function(){
+        Route::group(['prefix' => 'biodata','middleware' => ['role:Admin,Karyawan']],function(){
             Route::get('/',[BiodataController::class,'index'])->name('biodata');
             Route::get('create',[BiodataController::class,'create'])->name('create-biodata');
             Route::post('store',[BiodataController::class,'store'])->name('storeBiodata');

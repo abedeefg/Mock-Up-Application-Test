@@ -22,7 +22,7 @@ class PendidikanController extends Controller
         if ($request->ajax()) {
           
             if (auth('admin')->user()->level=="Admin") {
-                $data = Pendidikan::all();
+                $data = Pendidikan::with('admin')->get();
             }else{
                 $data = Pendidikan::with('admin')->where('admin_id',auth('admin')->user()->id)->get();
 

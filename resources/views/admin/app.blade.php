@@ -58,7 +58,7 @@
                         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="https://ui-avatars.com/api/?name={{auth('admin')->user()->nama_lengkap}}" alt="user-image" class="rounded-circle">
                             <span class="pro-user-name ml-1">
-                                {{auth('admin')->user()->nama_lengkap}} <i class="mdi mdi-chevron-down"></i> 
+                                {{auth('admin')->user()->email}} <i class="mdi mdi-chevron-down"></i> 
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">

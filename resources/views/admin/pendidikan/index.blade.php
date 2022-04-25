@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Email</th>
                             <th>Jenjang Pendidikan</th>
                             <th>Nama Institusi</th>
                             <th>Jurusan</th>
@@ -50,6 +51,7 @@
                 ajax: "{{ route('pendidikan') }}",
                 columns: [
                     {   data: 'DT_RowIndex',    name:'DT_RowIndex'},
+                    {   data: 'admin.email',          name: 'admin.email'},
                     {   data: 'jenjang_pendidikan_terakhir',          name: 'jenjang_pendidikan_terakhir'},
                     {   data: 'nama_institusi',          name: 'nama_institusi'},
                     {   data: 'jurusan',          name: 'jurusan'},
